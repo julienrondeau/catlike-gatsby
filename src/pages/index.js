@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/common/layout';
 import Footer from '../components/common/Footer';
 import Header from '../components/common/Header';
+import SEO from '../components/common/seo';
 
 import Introduction from '../components/introduction/Introduction';
 // import Features from '../components/features/Features';
@@ -17,6 +18,7 @@ import TrailersTv from '../components/trailers/TrailersTv';
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Catlike Production" />
     <Header />
     <div id="wrapper">
       <Introduction />
