@@ -43,7 +43,7 @@ class Scroll extends React.Component {
       ? this.scrollTo(elem, offset, timeout)
       : console.log(`Element not found: ${element}`); // eslint-disable-line
   }
-  scrollTo(element, offSet = 0, timeout = null) {
+  scrollTo(element, offSet = -70, timeout = null) {
     const elemPos = element
       ? element.getBoundingClientRect().top + window.pageYOffset
       : 0;
@@ -61,7 +61,7 @@ class Scroll extends React.Component {
         {typeof this.props.children === 'object' ? (
           React.cloneElement(this.props.children, { onClick: this.handleClick })
         ) : (
-          <span onClick={this.handleClick}>{this.props.children}</span>
+          <button onClick={this.handleClick}>{this.props.children}</button>
         )}
       </Element>
     );

@@ -1,0 +1,67 @@
+/*
+* PARTENAIRES
+*/
+
+.partenaires-content {
+  @include clearfix();
+  background: $grey;
+  padding: 0 0 6%;
+
+  .partenaires-container {
+    color: $black;
+
+    .bloc-gauche {
+      text-align: center;
+    }
+    .bloc-droit {
+      margin: 20px 3% 0;
+
+      strong {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      p {
+        @include breakpoint('>=medium') {
+          max-width: 70%;
+        }
+      }
+
+      @include breakpoint('>=medium') {
+        margin: 0;
+        padding-left: 25px;
+      }
+      @include breakpoint('>=large') {
+        padding-left: 0;
+      }
+    }
+
+    .partners-logo {
+      text-align: center;
+    }
+
+    .partners-infos {
+      padding: 10px 30px;
+      vertical-align: top;
+    }
+
+    @include breakpoint('<=medium') {
+      table {
+        tbody {
+          display: flex;
+          flex-flow: column wrap;
+        }
+
+        tr {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .partners-infos {
+          text-align: center;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}

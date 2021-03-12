@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/common/layout';
 import Footer from '../components/common/Footer';
@@ -475,52 +476,112 @@ const SecondPage = () => (
               <div class="row gtr-uniform">
                 <div class="col-12">
                   <span class="image fit">
-                    <img src="images/pic04.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic04.jpg"
+                      width={1040}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic01.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic01.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic02.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic02.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic03.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic03.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic03.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic03.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic01.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic01.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic02.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic02.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic02.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic02.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic03.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic03.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
                 <div class="col-4">
                   <span class="image fit">
-                    <img src="images/pic01.jpg" alt="" />
+                    <StaticImage
+                      src="../images/pic01.jpg"
+                      width={438}
+                      quality={95}
+                      formats={['AUTO', 'WEBP', 'AVIF']}
+                      alt="pic-batsby"
+                    />
                   </span>
                 </div>
               </div>
@@ -528,7 +589,13 @@ const SecondPage = () => (
             <h3>Left &amp; Right</h3>
             <p>
               <span class="image left">
-                <img src="images/pic05.jpg" alt="" />
+                <StaticImage
+                  src="../images/pic05.jpg"
+                  width={219}
+                  quality={95}
+                  formats={['AUTO', 'WEBP', 'AVIF']}
+                  alt="pic-batsby"
+                />
               </span>
               Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
               sagittis eget. tempus euismod. Vestibulum ante ipsum primis in
@@ -554,7 +621,13 @@ const SecondPage = () => (
             </p>
             <p>
               <span class="image right">
-                <img src="images/pic06.jpg" alt="" />
+                <StaticImage
+                  src="../images/pic06.jpg"
+                  width={219}
+                  quality={95}
+                  formats={['AUTO', 'WEBP', 'AVIF']}
+                  alt="pic-batsby"
+                />
               </span>
               Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
               sagittis eget. tempus euismod. Vestibulum ante ipsum primis in

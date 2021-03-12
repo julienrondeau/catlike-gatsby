@@ -1,0 +1,304 @@
+/*
+* TRAILERS SECTION
+*/
+
+.trailers-content {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.trailers-cat {
+  width: 100%;
+}
+
+.trailers-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  @include breakpoint('>=medium') {
+    flex-flow: row wrap;
+  }
+}
+
+#trailersTV {
+  display: block;
+}
+
+.trailer {
+  @include clearfix();
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+
+  @include breakpoint('>=medium') {
+    flex: 0 0 50%;
+  }
+  @include breakpoint('>=xlarge') {
+    flex: 0 0 33.333333%;
+  }
+
+  .overlay {
+    @include transition();
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+
+    @include breakpoint('>=large') {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .trailer-entry-content {
+    position: relative;
+  }
+
+  .trailer-img {
+    flex: 1;
+    @include transition(transform, 0.5s);
+    width: 100%;
+  }
+  .trailer-title {
+    @include transition();
+    @include clearfix();
+    @include center(xy);
+    position: absolute;
+    width: 100%;
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+
+  .trailer-players {
+    @include transition(all, 0.5s);
+    @include center(x);
+    width: 100%;
+    flex-flow: column wrap;
+    position: absolute;
+    bottom: 30px;
+    display: none;
+    opacity: 0;
+    z-index: 110;
+
+    @include breakpoint('>=xlarge') {
+      bottom: 80px;
+    }
+
+    .players-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    p {
+      flex: 1;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      margin: 0 0 5px;
+      font-weight: 700;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+
+      @include breakpoint('>=xlarge') {
+        margin-bottom: 15px;
+      }
+    }
+
+    &.display {
+      opacity: 1;
+      bottom: 80px;
+
+      @include breakpoint('>=large') {
+        bottom: 90px;
+      }
+
+      @include breakpoint('>=xlarge') {
+        bottom: 100px;
+      }
+      @include breakpoint('>=xxlarge') {
+        bottom: 90px;
+      }
+      // @include breakpoint('>=xxx') {
+      //   bottom: 110px;
+      // }
+      @include breakpoint('>=xxxlarge') {
+        bottom: 200px;
+      }
+    }
+
+    .btn-player {
+      @include transition();
+      background: transparent;
+      border: 1px solid $white;
+      border-radius: 2px;
+      text-transform: uppercase;
+      width: auto;
+      flex: 0 0 27.33333%;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.7);
+      a {
+        color: $white;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+        float: 1px;
+      }
+
+      @include on-event() {
+        background: $white;
+
+        a {
+          color: $black__light;
+          text-shadow: none;
+        }
+      }
+
+      @include breakpoint('>=xlarge') {
+        height: 40px;
+        flex: 0 0 25%;
+      }
+
+      @include breakpoint('>=xxxlarge') {
+        height: 45px;
+      }
+    }
+  }
+
+  .trailer-infos {
+    @include transition(all, 0.2s);
+    // transition: max-height 0.4s, opacity 1s;
+    font-size: 16px;
+    height: auto;
+    max-height: 0;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: $white;
+    color: $black__light;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    line-height: 18px;
+    position: relative;
+
+    .title {
+      display: none;
+    }
+
+    div {
+      margin: 5px 0;
+    }
+
+    @include breakpoint('>=medium') {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      width: 100%;
+      z-index: 100;
+      padding: 15px;
+    }
+
+    @include breakpoint('>=large') {
+      top: 0;
+      bottom: auto;
+      transform: none;
+      background-color: transparent;
+      color: $white;
+
+      .title {
+        display: none;
+        margin: 0 0 10px;
+      }
+    }
+
+    @include breakpoint('>=large') {
+      &.hide {
+        color: transparent;
+      }
+    }
+
+    @include breakpoint('>=xlarge') {
+      padding: 30px;
+    }
+
+    @include breakpoint('>=xxlarge') {
+      padding: 10px 15px;
+    }
+  }
+
+  &.show {
+    .overlay {
+      opacity: 1;
+    }
+    .trailer-title {
+      top: 85%;
+    }
+    .trailer-players {
+      display: flex;
+    }
+    .trailer-infos {
+      max-height: 500px;
+      padding: 15px 15px 25px;
+      opacity: 1;
+    }
+
+    @include breakpoint('>=medium') {
+      .trailer-infos {
+        padding: 15px;
+      }
+    }
+
+    @include breakpoint('>=xlarge') {
+      .trailer-infos {
+        padding: 30px;
+      }
+      .trailer-title {
+        top: 85%;
+      }
+    }
+    @include breakpoint('>=xxlarge') {
+      .trailer-infos {
+        padding: 10px 15px;
+      }
+      .trailer-title {
+        top: 85%;
+      }
+    }
+
+    // @include breakpoint(1880px) {
+    //   .trailer-infos {
+    //     padding: 30px;
+    //   }
+    // }
+
+    @include breakpoint('>=xxxlarge') {
+      .trailer-title {
+        top: 75%;
+      }
+    }
+  }
+
+  @include on-event() {
+    .trailer-img {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.trailer-tv-container {
+  @include clearfix;
+}

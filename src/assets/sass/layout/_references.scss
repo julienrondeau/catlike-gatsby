@@ -1,0 +1,49 @@
+/*
+* CLIENTS
+*/
+
+.clients-content {
+  @include clearfix();
+  background-color: $grey__dark;
+  padding: 0 0 4%;
+  text-align: center;
+
+  .clients-container {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+
+    p {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    img {
+      margin: 5% auto;
+      max-width: 40%;
+    }
+
+    @include breakpoint('>=medium') {
+      p {
+        display: block;
+      }
+      img {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .clients-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gatsby-image-wrapper {
+      flex: 0 0 200px;
+      margin: 10px;
+    }
+  }
+}

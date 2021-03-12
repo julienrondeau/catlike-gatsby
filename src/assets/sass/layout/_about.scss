@@ -1,0 +1,121 @@
+/*
+* ABOUT
+*/
+
+.about-content {
+  @include clearfix();
+  .container {
+    @include clearfix();
+    position: relative;
+    padding: 0 3%;
+
+    @include breakpoint('xlarge') {
+      padding: 0;
+    }
+  }
+
+  .catlike-title {
+    @extend h2;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+  .catlike-subTitle {
+    @extend h3;
+  }
+
+  .flags {
+    @include clearfix();
+    position: absolute;
+    right: 2%;
+    top: 61px;
+
+    .flag {
+      cursor: pointer;
+      text-indent: -2000%;
+      overflow: hidden;
+      display: block;
+      float: left;
+      margin: 0 10px;
+      width: 35px;
+      height: 35px;
+    }
+    .en {
+      background: url('images/uk.png') center center no-repeat;
+      background-size: contain;
+    }
+    .fr {
+      background: url('images/fr.png') center center no-repeat;
+      background-size: contain;
+    }
+    .es {
+      background: url('images/es.png') center center no-repeat;
+      background-size: contain;
+    }
+  }
+  .about-blocks {
+    @include clearfix();
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+    &:before {
+      @include center(x);
+      content: '';
+      position: absolute;
+      top: -15px;
+      width: 80%;
+      height: 1px;
+      background-color: #ddd;
+    }
+  }
+  .about-block {
+    @include transition();
+  }
+
+  .bloc-gauche {
+    @include breakpoint('>=medium') {
+      padding-right: 30px;
+    }
+  }
+
+  #aboutFR,
+  #aboutES {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: row wrap;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  .socials {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+
+    @include breakpoint('>=large') {
+      @include center(x);
+      top: 0;
+      right: auto;
+    }
+
+    .linkedin {
+      background: url(images/linkedin.png) center center no-repeat;
+      width: 44px;
+      height: 44px;
+      text-indent: -300%;
+      overflow: hidden;
+      display: block;
+    }
+  }
+}

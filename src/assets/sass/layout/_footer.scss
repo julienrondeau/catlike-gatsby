@@ -6,33 +6,55 @@
 
 /* Footer */
 
-	#footer {
-		#sidebar + #wrapper + & {
-			margin-left: _size(sidebar-width);
+#footer {
+  #sidebar + #wrapper + & {
+    margin-left: _size(sidebar-width);
 
-			@include breakpoint('<=large') {
-				margin-left: 0;
-			}
-		}
+    @include breakpoint('<=large') {
+      margin-left: 0;
+    }
+  }
 
-		> .inner {
-			a {
-				border-bottom-color: _palette(border);
+  > .inner {
+    a {
+      border-bottom-color: _palette(border);
 
-				&:hover {
-					border-bottom-color: transparent;
-				}
-			}
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
 
-			.menu {
-				font-size: 0.8em;
-				color: _palette(border);
-			}
-		}
+  #header + #wrapper + & {
+    > .inner {
+      margin: 0 auto;
+    }
+  }
+}
 
-		#header + #wrapper + & {
-			> .inner {
-				margin: 0 auto;
-			}
-		}
-	}
+.site-footer {
+  background: -palette(fg-bold);
+  padding: 30px 0 20px;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  .socials {
+    position: relative;
+    .linkedin {
+      text-indent: -30000%;
+      overflow: hidden;
+      width: 44px;
+      height: 44px;
+      background: url('images/linkedin.png') center center no-repeat;
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+
+  .footer-info {
+    font-size: 13px;
+    color: #a3a3a3;
+  }
+}

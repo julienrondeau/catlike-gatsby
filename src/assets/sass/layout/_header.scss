@@ -11,6 +11,11 @@
   background-color: _palette(accent1);
   cursor: default;
   padding: 1.75em 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
   > .title {
     border: 0;
@@ -30,7 +35,7 @@
 
       > li {
         display: inline-block;
-        margin-left: 1.75em;
+        margin-left: 3%;
         padding: 0;
         vertical-align: middle;
 
@@ -44,19 +49,24 @@
         }
         a {
           border: 0;
-          color: _palette(fg-light);
+          color: _palette(fg-bold);
+          font-family: _font(family) !important;
           display: inline-block;
-          font-size: 0.6em;
+          font-size: 20px;
+          line-height: 1.5;
           font-weight: _font(weight-bold);
           letter-spacing: _font(kerning-alt);
           text-transform: uppercase;
+          padding-left: 15px;
+          padding-right: 15px;
+          letter-spacing: 1px;
 
           &:hover {
-            color: _palette(fg);
+            color: _palette(accent1-alt);
           }
 
           &.active {
-            color: _palette(fg-bold);
+            color: _palette(accent1-alt);
           }
         }
       }

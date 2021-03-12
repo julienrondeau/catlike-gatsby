@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const ContactInformation = () =>
+const ContactInformation = () => (
   <section>
     <ul className="contact">
       <li>
@@ -53,5 +53,6 @@ const ContactInformation = () =>
       </li>
     </ul>
   </section>
+);
 
 export default ContactInformation;

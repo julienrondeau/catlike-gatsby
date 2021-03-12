@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactForm = () =>
+const ContactForm = () => (
   <section>
     <form method="post" action="#">
       <div className="fields">
@@ -26,5 +26,6 @@ const ContactForm = () =>
       </ul>
     </form>
   </section>
+);
 
 export default ContactForm;

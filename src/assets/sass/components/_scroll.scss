@@ -1,0 +1,69 @@
+//  Created on : 5 janv. 2017, 10:04:52
+// -----------------------------------------------------------------------------
+// This file contains all styles related to
+// -----------------------------------------------------------------------------
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  @include transition();
+  width: 35px;
+  height: 55px;
+  margin-left: -20px;
+  bottom: 4%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 2px #fff;
+  border-radius: 25px;
+  padding-top: 59px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  display: block;
+  z-index: 99;
+
+  &.skrolled {
+    opacity: 0;
+  }
+
+  &:hover {
+    outline: none;
+    color: white;
+  }
+
+  @include breakpoint('>=medium') {
+    width: 40px;
+    height: 70px;
+    bottom: 2%;
+    padding-top: 45px;
+  }
+
+  @include breakpoint('>=large') {
+    color: transparent;
+  }
+}
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+    transform: translateY(46px);
+  }
+}
