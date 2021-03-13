@@ -62,11 +62,11 @@
           letter-spacing: 1px;
 
           &:hover {
-            color: _palette(accent1-alt);
+            color: _palette(accent3);
           }
 
           &.active {
-            color: _palette(accent1-alt);
+            color: _palette(accent3);
           }
         }
       }
