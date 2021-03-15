@@ -18,8 +18,6 @@ function Trailer(props) {
     }
     trailerContentHeight();
     window.onresize = trailerContentHeight;
-    // imageUrl = getImage(props.imageTrailer);
-    // console.log(imageUrl);
   });
 
   // render() {
