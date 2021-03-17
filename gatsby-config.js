@@ -43,7 +43,7 @@ module.exports = {
         src: '/scripts.js', // Change to the script filename
       },
     },
-    'gatsby-plugin-sass',
+    `gatsby-plugin-sass`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

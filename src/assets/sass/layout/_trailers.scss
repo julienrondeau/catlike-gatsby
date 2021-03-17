@@ -33,6 +33,12 @@
   cursor: pointer;
   position: relative;
 
+  &:hover {
+    .trailer-players {
+      opacity: 1;
+    }
+  }
+
   @include breakpoint('>=medium') {
     flex: 0 0 50%;
   }
@@ -89,13 +95,9 @@
     flex-flow: column wrap;
     position: absolute;
     bottom: 30px;
-    display: none;
+    display: block;
     opacity: 0;
     z-index: 110;
-
-    @include breakpoint('>=xlarge') {
-      bottom: 80px;
-    }
 
     .players-container {
       display: flex;

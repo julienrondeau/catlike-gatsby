@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 function Trailer(props) {
   // let imageUrl = '';
@@ -19,6 +20,21 @@ function Trailer(props) {
     trailerContentHeight();
     window.onresize = trailerContentHeight;
   });
+
+  const options = {
+    settings: {},
+    caption: {},
+    buttons: {
+      showAutoplayButton: false,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showNextButton: false,
+      showPrevButton: false,
+      showThumbnailsButton: false,
+    },
+    thumbnails: { showThumbnails: false },
+    progressBar: {},
+  };
 
   // render() {
   return (
@@ -40,7 +56,15 @@ function Trailer(props) {
         <h2 className="trailer-title">{props.title}</h2>
         <div className="trailer-players">
           <div className="players-container">
-            <button className="btn-player">Player</button>
+            <SRLWrapper options={options}>
+              <a href={props.imageTrailer}>
+                <img
+                  src={'/btn-trailer.png'}
+                  alt={props.title}
+                  style={{ width: 150, height: 33 }}
+                />
+              </a>
+            </SRLWrapper>
           </div>
         </div>
       </div>
