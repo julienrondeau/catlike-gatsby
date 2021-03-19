@@ -7,11 +7,11 @@ deploy-site:
       - whoami    
       - ls -alh /
       - cat /etc/debian_version
-      - ls -al /builds/test/catlike-gastby/
+      - ls -al /ssh-cfg
       - ls -al /root
       - mkdir /root/.ssh/
       - ls -al /root
-      - cp /ssh-conf/* /root/.ssh/
+      - cp /ssh-cfg/* /root/.ssh/
       - cat /root/.ssh/known_hosts
       - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
       
