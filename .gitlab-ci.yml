@@ -9,12 +9,14 @@ cache:
     - .cache/
     - public/
 
-pages:
+build-site:
   script:
     - yarn install
     - ./node_modules/.bin/gatsby build --prefix-paths
-  artifacts:
-    paths:
-      - public
   only:
     - master
+
+deploy-site:
+  script:
+      - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
+      
