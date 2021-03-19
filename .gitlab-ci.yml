@@ -7,7 +7,7 @@ deploy-site:
       - whoami    
       - ls -alh /
       - cat /etc/debian_version
-      - ls -al /var/builds
+      - ls -al /builds
       - ls -al /root
       - mkdir /root/.ssh/
       - ls -al /root
