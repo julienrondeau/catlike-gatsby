@@ -11,7 +11,7 @@ deploy-site:
       - ls -al /root
       - mkdir /root/.ssh/
       - ls -al /root
-      - cp /var/ssh-conf/* /root/.ssh/
+      - cp /ssh-conf/* /root/.ssh/
       - cat /root/.ssh/known_hosts
       - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
       
