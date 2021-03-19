@@ -1,17 +1,24 @@
 image: node:latest
 
+# This folder is cached between builds
+# https://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+    # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
+    - .cache/
+    - public/
 
+build-site:
+  script:
+    - yarn install
+    - ./node_modules/.bin/gatsby build --prefix-paths
+  only:
+    - master
 
 deploy-site:
   script:
       - whoami    
-      - ls -alh /
-      - cat /etc/debian_version
-      - ls -al /ssh-cfg
-      - ls -al /root
       - mkdir /root/.ssh/
-      - ls -al /root
       - cp /ssh-cfg/* /root/.ssh/
-      - cat /root/.ssh/known_hosts
       - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
-      
