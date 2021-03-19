@@ -7,7 +7,7 @@ deploy-site:
       - whoami    
       - ls -alh /
       - cat /etc/debian_version
-      - ls -al /builds
+      - ls -al /builds/test/catlike-gastby/
       - ls -al /root
       - mkdir /root/.ssh/
       - ls -al /root
