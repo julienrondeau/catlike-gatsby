@@ -9,17 +9,14 @@ cache:
     - .cache/
     - public/
 
-build-site:
-  script:
-    - yarn install
-    - ./node_modules/.bin/gatsby build --prefix-paths
-  only:
-    - master
+
 
 deploy-site:
   script:
       - whoami    
-      - ls -alh '/root/.ssh'
-      - cat '/root/.ssh/known_hosts'
+      - ls -alh /
+      - ls -alh /etc
+      - cat /etc/debian_version
+      - ls -al /root
+      - cat /root/.ssh/known_hosts
       - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
-      
