@@ -7,12 +7,17 @@ cache:
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - .cache/
     - public/
-pages:
+
+build-site:
   script:
-    - npm install
+    - yarn install
     - ./node_modules/.bin/gatsby build --prefix-paths
-  artifacts:
-    paths:
-      - public
   only:
     - master
+
+deploy-site:
+  script:
+    - whoami
+    - mkdir /root/.ssh/
+    - cp /ssh-cfg/* /root/.ssh/
+    - scp -Cpr ./public root@10.163.254.215:/var/www/static/catlike-gatsby
