@@ -15,7 +15,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 
   > .title {
     border: 0;
@@ -49,7 +49,7 @@
         }
         a {
           border: 0;
-          color: _palette(accent3;
+          color: _palette(fg-bold);
           font-family: _font(family) !important;
           display: inline-block;
           font-size: 20px;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const Contact = () => (
   <section id="contact" className="contact-content">
@@ -29,6 +28,7 @@ const Contact = () => (
             height="240"
             allowFullScreen=""
             loading="lazy"
+            title="Catlike Belgium"
           ></iframe>
         </div>
         <div className="location">
@@ -46,6 +46,7 @@ const Contact = () => (
             height="240"
             allowFullScreen=""
             loading="lazy"
+            title="Catlike France"
           ></iframe>
         </div>
         <div className="location">
@@ -62,6 +63,7 @@ const Contact = () => (
             height="240"
             allowFullScreen=""
             loading="lazy"
+            title="Catlike Spain"
           ></iframe>
         </div>
       </div>

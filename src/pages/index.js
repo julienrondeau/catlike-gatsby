@@ -5,8 +5,6 @@ import Footer from '../components/common/Footer';
 import Header from '../components/common/Header';
 import SEO from '../components/common/seo';
 
-import SimpleReactLightbox from 'simple-react-lightbox';
-
 import Introduction from '../components/introduction/Introduction';
 // import Features from '../components/features/Features';
 // import Capabilities from '../components/capabilities/Capabilities';
@@ -22,25 +20,23 @@ import TrailersTv from '../components/trailers/TrailersTv';
 // import ReactImageVideoLightbox from 'react-image-video-lightbox';
 
 const IndexPage = () => (
-  <SimpleReactLightbox>
-    <Layout>
-      <SEO title="Catlike Production" />
-      <Header />
-      <div id="wrapper">
-        <Introduction />
-        <TrailersFiction />
-        <TrailersDocumentary />
-        <TrailersTv />
-        {/* <VideoLightbox /> */}
-        <About />
-        <Partners />
-        <References />
-        <Contact />
-      </div>
+  <Layout>
+    <SEO title="Catlike Production" />
+    <Header />
+    <div id="wrapper">
+      <Introduction />
+      <TrailersFiction />
+      <TrailersDocumentary />
+      <TrailersTv />
+      {/* <VideoLightbox /> */}
+      <About />
+      <Partners />
+      <References />
+      <Contact />
+    </div>
 
-      <Footer />
-    </Layout>
-  </SimpleReactLightbox>
+    <Footer />
+  </Layout>
 );
 
 export default IndexPage;

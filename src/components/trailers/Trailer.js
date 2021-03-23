@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { SRLWrapper } from 'simple-react-lightbox';
 
 function Trailer(props) {
   // let imageUrl = '';
@@ -21,50 +19,21 @@ function Trailer(props) {
     window.onresize = trailerContentHeight;
   });
 
-  const options = {
-    settings: {},
-    caption: {},
-    buttons: {
-      showAutoplayButton: false,
-      showDownloadButton: false,
-      showFullscreenButton: false,
-      showNextButton: false,
-      showPrevButton: false,
-      showThumbnailsButton: false,
-    },
-    thumbnails: { showThumbnails: false },
-    progressBar: {},
-  };
-
   // render() {
   return (
     <div className="trailer">
       <div className="trailer-entry-content">
         <img src={props.imageTrailer} alt="" className="trailer-img" />
-        {/* <GatsbyImage image={imageUrl} alt="" /> */}
-        {/* <StaticImage
-          src={props.imageTrailer}
-          width={312}
-          quality={95}
-          placeholder="blurred"
-          formats={['AUTO', 'WEBP', 'AVIF']}
-          alt="Catlike Productions"
-          className="trailer-img"
-        /> */}
-
         <div className="overlay"></div>
         <h2 className="trailer-title">{props.title}</h2>
         <div className="trailer-players">
           <div className="players-container">
-            <SRLWrapper options={options}>
-              <a href={props.imageTrailer}>
-                <img
-                  src={'/btn-trailer.png'}
-                  alt={props.title}
-                  style={{ width: 150, height: 33 }}
-                />
-              </a>
-            </SRLWrapper>
+            <img
+              src={'/btn-trailer.png'}
+              alt={props.title}
+              style={{ width: 150, height: 33 }}
+              onClick={props.onClick}
+            />
           </div>
         </div>
       </div>

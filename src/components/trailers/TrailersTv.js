@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 // import Trailer from './Trailer';
 import Slider from 'react-slick';
