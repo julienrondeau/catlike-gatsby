@@ -32,13 +32,14 @@ export default function TrailersFiction({ children }) {
 
   const trailerFiction = dataFiction.allTrailersXml.edges;
 
-  const [imageToShow, setImageToShow] = useState('');
+  // Gestion de la lightbox
+  const [videoToShow, setVideoToShow] = useState('');
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
 
-  const videoUrl = `https://player.vimeo.com/video/${imageToShow}`;
+  const videoUrl = `https://player.vimeo.com/video/${videoToShow}`;
 
-  const showImage = image => {
-    setImageToShow(image);
+  const showVideo = video => {
+    setVideoToShow(video);
     setLightBoxDisplay(true);
   };
 
@@ -61,12 +62,11 @@ export default function TrailersFiction({ children }) {
             year={node.xmlChildren[8].content}
             production={node.xmlChildren[7].content}
             director={node.xmlChildren[5].content}
-            onClick={() => showImage(node.xmlChildren[4].content)}
+            onClick={() => showVideo(node.xmlChildren[4].content)}
           />
         ))}
         {lightboxDisplay ? (
           <div id="lightbox" onClick={hideLightBox}>
-            {/* <img id="lightbox-img" src={imageToShow}></img> */}
             <button onClick={hideLightBox} class="btn-close">
               Fermer
             </button>
