@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Trailer from './Trailer';
+import Video from '../videos/Video';
 
 export default function TrailersDocumentary({ children }) {
   const dataDocumentary = useStaticQuery(
@@ -66,18 +67,11 @@ export default function TrailersDocumentary({ children }) {
           />
         ))}
         {lightboxDisplay ? (
-          <div id="lightbox" onClick={hideLightBox}>
-            <button onClick={hideLightBox} class="btn-close">
-              Fermer
-            </button>
-            <iframe
-              src={videoUrl}
-              width="640"
-              height="360"
-              allow="autoplay; fullscreen; picture-in-picture"
-              title="Catlike Documentary Trailer"
-            ></iframe>
-          </div>
+          <Video
+            videoSrcURL={videoUrl}
+            videoTitle="Catlike Documentary Trailer"
+            click={() => hideLightBox()}
+          />
         ) : (
           ''
         )}

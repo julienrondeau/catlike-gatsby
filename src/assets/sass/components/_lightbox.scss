@@ -12,12 +12,6 @@
   cursor: pointer;
 }
 
-#lightbox-img {
-  height: 80vh;
-  max-width: 90vw;
-  object-fit: cover;
-}
-
 .btn-close {
   transition: all 0.3s ease;
   border: 1px solid $black !important;

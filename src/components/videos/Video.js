@@ -1,12 +1,18 @@
 import React from 'react';
-import { SRLWrapper } from 'simple-react-lightbox';
 
-const VideoLightbox = () => (
-  <SRLWrapper>
-    <a href="https://placekitten.com/550/500">
-      <img src="https://placekitten.com/550/500" alt="Umbrella" />
-    </a>
-  </SRLWrapper>
+const Video = ({ videoSrcURL, videoTitle, click, ...props }) => (
+  <div id="lightbox" onClick={click}>
+    <button onClick={click} className="btn-close">
+      Fermer
+    </button>
+    <iframe
+      src={videoSrcURL}
+      title={videoTitle}
+      width="640"
+      height="360"
+      allow="autoplay; fullscreen; picture-in-picture"
+    ></iframe>
+  </div>
 );
 
-export default VideoLightbox;
+export default Video;

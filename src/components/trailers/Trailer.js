@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 function Trailer(props) {
-  // let imageUrl = '';
   useEffect(() => {
     // Ajuste la hauteur des blocs Trailer par rapport à la hauteur de l'image
     function trailerContentHeight() {
@@ -19,7 +18,6 @@ function Trailer(props) {
     window.onresize = trailerContentHeight;
   });
 
-  // render() {
   return (
     <div className="trailer">
       <div className="trailer-entry-content">
@@ -52,7 +50,6 @@ function Trailer(props) {
       </div>
     </div>
   );
-  // }
 }
 
 export default Trailer;
