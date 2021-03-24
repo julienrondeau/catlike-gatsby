@@ -26,12 +26,15 @@ function Trailer(props) {
         <h2 className="trailer-title">{props.title}</h2>
         <div className="trailer-players">
           <div className="players-container">
-            <img
+            {/* <img
               src={'/btn-trailer.png'}
               alt={props.title}
               style={{ width: 150, height: 33 }}
               onClick={props.onClick}
-            />
+            /> */}
+            <button className="btn-player" onClick={props.onClick}>
+              Trailer
+            </button>
           </div>
         </div>
       </div>
